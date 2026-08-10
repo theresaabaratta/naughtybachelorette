@@ -257,6 +257,23 @@
     margin-bottom:0;
   }
 
+  /* EXPLORE MORE */
+  .nb-explore{padding:5rem 0; background:var(--nb-cream);}
+  .nb-explore-card{
+    display:block;
+    background:var(--nb-blush);
+    border-radius:14px;
+    padding:1.6rem;
+    height:100%;
+    border:1.5px solid transparent;
+    transition:transform .2s ease, border-color .2s ease;
+    color:var(--nb-ink);
+  }
+  .nb-explore-card:hover{transform:translateY(-4px); border-color:var(--nb-pink); color:var(--nb-ink);}
+  .nb-explore-card h3{font-size:1.1rem; font-weight:600; margin-bottom:.4rem;}
+  .nb-explore-card p{color:#4a3b45; font-size:.9rem; margin-bottom:.9rem;}
+  .nb-explore-link{color:var(--nb-pink-deep); font-weight:600; font-size:.88rem;}
+
   /* CTA */
   .nb-cta{
     background:linear-gradient(120deg, var(--nb-pink-deep), var(--nb-purple));
@@ -320,6 +337,8 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="#itinerary">Itinerary</a></li>
         <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="boat-charters.html">Boat Charters</a></li>
+        <li class="nav-item"><a class="nav-link" href="planners.html">Planners</a></li>
         <li class="nav-item"><a class="nav-link" href="#tips">Planning Tips</a></li>
         <li class="nav-item mt-2 mt-lg-0"><a class="btn-nb-outline" href="#cta">Start Planning</a></li>
       </ul>
@@ -558,6 +577,47 @@
   </div>
 </section>
 
+<!-- EXPLORE MORE -->
+<section class="nb-explore">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="nb-eyebrow">keep exploring</span>
+      <h2 class="nb-section-title mb-3">More of the guide</h2>
+      <p class="mx-auto" style="max-width:600px; color:#4a3b45;">Everything else you'll need to build out the weekend, one page at a time.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <a href="activities-list.html" class="nb-explore-card">
+          <h3>Activity List</h3>
+          <p>Game shows, karaoke, comedy, theatre, and standout local lounges.</p>
+          <span class="nb-explore-link">Browse activities &rarr;</span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <a href="boat-charters.html" class="nb-explore-card">
+          <h3>Boat Charters</h3>
+          <p>Where to book a yacht, sailboat, or pontoon for a day on the water.</p>
+          <span class="nb-explore-link">See charters &rarr;</span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <a href="planners.html" class="nb-explore-card">
+          <h3>Party Planners</h3>
+          <p>Local planners who'll handle decor, setup, and itinerary logistics.</p>
+          <span class="nb-explore-link">Find a planner &rarr;</span>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <a href="about.html" class="nb-explore-card">
+          <h3>About</h3>
+          <p>Who's behind Naughty Bachelorette and what the site is all about.</p>
+          <span class="nb-explore-link">Read more &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="nb-cta" id="cta">
   <div class="container">
@@ -580,6 +640,8 @@
         <ul class="list-unstyled">
           <li class="mb-2"><a href="#itinerary">The Itinerary</a></li>
           <li class="mb-2"><a href="#activities">Activities</a></li>
+          <li class="mb-2"><a href="boat-charters.html">Boat Charters</a></li>
+          <li class="mb-2"><a href="planners.html">Planners</a></li>
           <li class="mb-2"><a href="#tips">Planning Tips</a></li>
         </ul>
       </div>
