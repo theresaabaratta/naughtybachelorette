@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naughty Bachelorette | Wild &amp; Fun Bachelorette Party Ideas</title>
+<meta name="description" content="Naughty Bachelorette is your guide to planning a wild, unforgettable bachelorette weekend — bar crawls, rage rooms, boat charters, clubs, eateries and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,600&family=Caveat:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root{
+    --nb-ink:#1A0E17;
+    --nb-ink-2:#2A1522;
+    --nb-pink:#FF4D8D;
+    --nb-pink-deep:#C22C63;
+    --nb-gold:#E8B86D;
+    --nb-blush:#F7E6E0;
+    --nb-purple:#8B5CF6;
+    --nb-cream:#FFF8F2;
+  }
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:var(--nb-cream);
+    color:var(--nb-ink);
+    font-weight:400;
+  }
+  h1,h2,h3,.display-font{
+    font-family:'Fraunces',serif;
+  }
+  .sash-font{
+    font-family:'Caveat',cursive;
+  }
+  a{text-decoration:none;}
+
+  /* NAVBAR */
+  .nb-navbar{
+    background:var(--nb-ink);
+    padding:.9rem 0;
+  }
+  .nb-navbar .navbar-brand{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:1.5rem;
+    color:var(--nb-cream)!important;
+    letter-spacing:.3px;
+  }
+  .nb-navbar .navbar-brand span{color:var(--nb-pink);}
+  .nb-navbar .nav-link{
+    color:rgba(247,230,224,.8)!important;
+    font-weight:500;
+    font-size:.95rem;
+    margin:0 .4rem;
+  }
+  .nb-navbar .nav-link:hover{color:var(--nb-pink)!important;}
+  .btn-nb-outline{
+    border:1.5px solid var(--nb-pink);
+    color:var(--nb-cream)!important;
+    border-radius:40px;
+    padding:.4rem 1.2rem;
+    font-weight:600;
+    font-size:.9rem;
+  }
+  .btn-nb-outline:hover{background:var(--nb-pink);}
+
+  /* HERO */
+  .nb-hero{
+    background:radial-gradient(circle at 20% 20%, var(--nb-ink-2), var(--nb-ink) 65%);
+    color:var(--nb-cream);
+    padding:6rem 0 5rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .nb-hero .confetti{
+    position:absolute; border-radius:50%; opacity:.55;
+  }
+  .nb-hero-eyebrow{
+    font-family:'Caveat',cursive;
+    font-size:1.6rem;
+    color:var(--nb-gold);
+    transform:rotate(-3deg);
+    display:inline-block;
+  }
+  .nb-hero h1{
+    font-size:3.6rem;
+    font-weight:900;
+    line-height:1.05;
+    max-width:820px;
+  }
+  .nb-hero h1 em{
+    font-style:italic;
+    color:var(--nb-pink);
+  }
+  .nb-hero p.lead{
+    color:rgba(247,230,224,.85);
+    max-width:560px;
+    font-weight:300;
+    font-size:1.15rem;
+  }
+  .btn-nb-primary{
+    background:var(--nb-pink);
+    color:var(--nb-ink)!important;
+    border:none;
+    border-radius:40px;
+    padding:.85rem 1.9rem;
+    font-weight:600;
+    box-shadow:0 6px 0 var(--nb-pink-deep);
+    transition:transform .15s ease;
+  }
+  .btn-nb-primary:hover{transform:translateY(2px); box-shadow:0 4px 0 var(--nb-pink-deep);}
+  .btn-nb-ghost{
+    color:var(--nb-cream);
+    border:1.5px solid rgba(247,230,224,.4);
+    border-radius:40px;
+    padding:.85rem 1.7rem;
+    font-weight:500;
+  }
+  .btn-nb-ghost:hover{border-color:var(--nb-gold); color:var(--nb-gold);}
+
+  /* HOMEBASE STRIP */
+  .nb-homebase{
+    background:var(--nb-gold);
+    color:var(--nb-ink);
+    padding:.8rem 0;
+    font-weight:600;
+    font-size:.95rem;
+    text-align:center;
+  }
+  .nb-homebase .sash-font{font-size:1.25rem; font-weight:700;}
+
+  /* SECTION LABEL */
+  .nb-eyebrow{
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    color:var(--nb-pink-deep);
+    transform:rotate(-2deg);
+    display:inline-block;
+    margin-bottom:-.3rem;
+  }
+  .nb-section-title{
+    font-weight:900;
+    font-size:2.4rem;
+  }
+
+  /* ITINERARY - sash stops */
+  .nb-itinerary{padding:5rem 0; background:var(--nb-cream);}
+  .nb-stop{
+    display:flex;
+    gap:1.5rem;
+    padding:1.6rem 0;
+    border-bottom:1.5px dashed rgba(26,14,23,.15);
+  }
+  .nb-stop:last-child{border-bottom:none;}
+  .nb-stop-tag{
+    flex:0 0 auto;
+    width:92px;
+    height:56px;
+    background:var(--nb-ink);
+    color:var(--nb-cream);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Caveat',cursive;
+    font-size:1.5rem;
+    font-weight:700;
+    transform:rotate(-3deg);
+    position:relative;
+    border-radius:3px;
+  }
+  .nb-stop-tag::after{
+    content:"";
+    position:absolute;
+    top:-6px; left:50%;
+    width:10px; height:10px;
+    background:var(--nb-gold);
+    border-radius:50%;
+    transform:translateX(-50%);
+    box-shadow:0 0 0 3px var(--nb-cream);
+  }
+  .nb-stop-time{
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    color:var(--nb-pink-deep);
+    font-weight:600;
+    margin-bottom:.15rem;
+  }
+  .nb-stop h3{
+    font-size:1.35rem;
+    font-weight:600;
+    margin-bottom:.3rem;
+  }
+  .nb-stop p{
+    color:#4a3b45;
+    margin-bottom:0;
+    font-size:.97rem;
+  }
+
+  /* ACTIVITY CARDS */
+  .nb-activities{
+    background:var(--nb-ink);
+    padding:5rem 0;
+    color:var(--nb-cream);
+  }
+  .nb-activities .nb-eyebrow{color:var(--nb-gold);}
+  .nb-card{
+    background:var(--nb-ink-2);
+    border-radius:14px;
+    padding:1.8rem;
+    height:100%;
+    border:1px solid rgba(255,255,255,.06);
+    transition:transform .2s ease, border-color .2s ease;
+  }
+  .nb-card:hover{transform:translateY(-4px); border-color:var(--nb-pink);}
+  .nb-card .nb-icon{
+    width:48px; height:48px;
+    border-radius:50%;
+    background:rgba(255,77,141,.15);
+    color:var(--nb-pink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:1.3rem;
+    margin-bottom:1rem;
+  }
+  .nb-card h3{
+    font-size:1.15rem;
+    font-weight:600;
+    margin-bottom:.5rem;
+  }
+  .nb-card p{
+    color:rgba(247,230,224,.75);
+    font-size:.92rem;
+    margin-bottom:0;
+  }
+
+  /* TIPS BAND */
+  .nb-tips{
+    padding:5rem 0;
+    background:var(--nb-blush);
+  }
+  .nb-tip-num{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:2.2rem;
+    color:rgba(194,44,99,.35);
+    line-height:1;
+  }
+  .nb-tip h4{
+    font-weight:600;
+    font-size:1.05rem;
+    margin-bottom:.35rem;
+  }
+  .nb-tip p{
+    color:#4a3b45;
+    font-size:.92rem;
+    margin-bottom:0;
+  }
+
+  /* CTA */
+  .nb-cta{
+    background:linear-gradient(120deg, var(--nb-pink-deep), var(--nb-purple));
+    color:#fff;
+    padding:4rem 0;
+    text-align:center;
+  }
+  .nb-cta h2{font-weight:900; font-size:2.1rem;}
+
+  /* FOOTER */
+  .nb-footer{
+    background:var(--nb-ink);
+    color:rgba(247,230,224,.7);
+    padding:3rem 0 2rem;
+    font-size:.9rem;
+  }
+  .nb-footer h5{
+    font-family:'Fraunces',serif;
+    color:var(--nb-cream);
+    font-weight:700;
+    margin-bottom:1rem;
+  }
+  .nb-footer a{color:rgba(247,230,224,.7);}
+  .nb-footer a:hover{color:var(--nb-pink);}
+  .nb-footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    margin-top:2rem;
+    padding-top:1.5rem;
+    font-size:.82rem;
+  }
+  .nb-partner-link{
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    background:rgba(255,77,141,.12);
+    border:1px solid rgba(255,77,141,.35);
+    color:var(--nb-pink)!important;
+    padding:.5rem 1.1rem;
+    border-radius:30px;
+    font-weight:600;
+    font-size:.88rem;
+  }
+  .nb-partner-link:hover{background:var(--nb-pink); color:var(--nb-ink)!important;}
+
+  @media (max-width:767px){
+    .nb-hero h1{font-size:2.4rem;}
+    .nb-stop{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg nb-navbar sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#top">naughty<span>bachelorette</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nbNav" style="border-color:rgba(255,255,255,.3);">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nbNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#itinerary">Itinerary</a></li>
+        <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tips">Planning Tips</a></li>
+        <li class="nav-item mt-2 mt-lg-0"><a class="btn-nb-outline" href="#cta">Start Planning</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="nb-hero" id="top">
+  <div class="confetti" style="top:12%; left:8%; width:14px; height:14px; background:var(--nb-pink);"></div>
+  <div class="confetti" style="top:70%; left:15%; width:8px; height:8px; background:var(--nb-gold);"></div>
+  <div class="confetti" style="top:22%; right:12%; width:20px; height:20px; background:var(--nb-purple);"></div>
+  <div class="confetti" style="top:60%; right:20%; width:10px; height:10px; background:var(--nb-pink);"></div>
+  <div class="confetti" style="top:85%; left:45%; width:12px; height:12px; background:var(--nb-gold);"></div>
+  <div class="container position-relative">
+    <span class="nb-hero-eyebrow">last fling before the ring</span>
+    <h1 class="mt-2 mb-4">The bride tribe's guide to a <em>wild, unforgettable</em> weekend.</h1>
+    <p class="lead mb-4">Naughty Bachelorette is your no-fluff planning guide for bachelorette parties that are fun, flirty, and just the right amount of chaos — bar crawls, rage rooms, boat days, and everything in between.</p>
+    <div class="d-flex flex-wrap gap-3">
+      <a href="#itinerary" class="btn-nb-primary">See The Itinerary</a>
+      <a href="#activities" class="btn-nb-ghost">Browse Activities</a>
+    </div>
+  </div>
+</header>
+
+<!-- HOMEBASE STRIP -->
+<div class="nb-homebase">
+  Proudly based out of <span class="sash-font">Charleston, South Carolina</span> — planning tips built to work for any bachelorette destination.
+</div>
+
+<!-- ITINERARY -->
+<section class="nb-itinerary" id="itinerary">
+  <div class="container">
+    <div class="row justify-content-between align-items-end mb-5">
+      <div class="col-lg-7">
+        <span class="nb-eyebrow">the game plan</span>
+        <h2 class="nb-section-title mb-3">A general itinerary that works in <em style="font-style:italic; color:var(--nb-pink-deep);">any</em> city</h2>
+        <p style="max-width:600px; color:#4a3b45;">Swap in your own local spots, but this flow — fuel up, get active, get pampered, get loud — is the tried-and-true bones of a great bachelorette day. Built for a Friday-into-Saturday weekend, easy to compress into one wild day too.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">10 AM</div>
+          <div>
+            <div class="nb-stop-time">Stop 01 &middot; Fuel Up</div>
+            <h3>Bottomless brunch</h3>
+            <p>Kick things off with mimosas, a big group table, and a menu that can handle the whole crew. This is where the sash and veil come out and the day officially starts.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">12 PM</div>
+          <div>
+            <div class="nb-stop-time">Stop 02 &middot; Get Active</div>
+            <h3>Rage room or axe throwing</h3>
+            <p>Hand the bride a bat, a stack of plates, or an axe. Rage rooms and axe-throwing lounges are the perfect chaotic-good energy release before the real party starts, and they photograph incredibly well.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">2 PM</div>
+          <div>
+            <div class="nb-stop-time">Stop 03 &middot; Get On The Water</div>
+            <h3>Boat charter or pontoon cruise</h3>
+            <p>A few hours on the water with music, drinks, and a killer view is the group photo op of the whole trip. Book a charter with a bachelorette package if the city's on a coast, lake, or river.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">5 PM</div>
+          <div>
+            <div class="nb-stop-time">Stop 04 &middot; Reset &amp; Glam</div>
+            <h3>Spa hour and outfit change</h3>
+            <p>Back to the house or hotel for a quick reset — blowouts, touch-up makeup, and getting into the night-out outfits. Order appetizers in so nobody's running on empty.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">7 PM</div>
+          <div>
+            <div class="nb-stop-time">Stop 05 &middot; Eat Well</div>
+            <h3>Group dinner at a lively spot</h3>
+            <p>Pick a restaurant with energy — good cocktails, shareable plates, and a vibe that eases the group into night-out mode without needing a reservation for six hours.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">9 PM</div>
+          <div>
+            <div class="nb-stop-time">Stop 06 &middot; Bar Crawl</div>
+            <h3>Themed bar crawl through downtown</h3>
+            <p>Hit 3-4 bars with a loose theme (matching sashes, a scavenger-hunt game, or dares for the bride). Keep it walkable and pre-plan the route so nobody's stuck making decisions at midnight.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">12 AM</div>
+          <div>
+            <div class="nb-stop-time">Stop 07 &middot; Dance It Out</div>
+            <h3>Club or late-night lounge</h3>
+            <p>End the night on the dance floor. Grab a table or VIP section if the budget allows — it keeps the group together and gives the bride a home base to return to.</p>
+          </div>
+        </div>
+
+        <div class="nb-stop">
+          <div class="nb-stop-tag">2 AM</div>
+          <div>
+            <div class="nb-stop-time">Stop 08 &middot; Soak It Up</div>
+            <h3>Late-night bites</h3>
+            <p>Every good bachelorette night ends with pizza, tacos, or diner food on the walk home. Non-negotiable.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="nb-activities" id="activities">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="nb-eyebrow">mix and match</span>
+      <h2 class="nb-section-title mb-3">Activities to build your own weekend</h2>
+      <p class="mx-auto" style="max-width:600px; color:rgba(247,230,224,.75);">Every bachelorette crew is different. Pull from these categories to build a lineup that actually fits your group.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#127864;</div>
+          <h3>Clubs &amp; nightlife</h3>
+          <p>Dance floors, rooftop bars, and late-night lounges. Look for spots that take reservations for groups and offer bottle service if you want a dedicated table.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#128165;</div>
+          <h3>Rage rooms</h3>
+          <p>Smash plates, electronics, and furniture in a padded room with a baseball bat. A high-energy, laugh-out-loud activity that's great for photos and stress relief alike.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#127869;&#65039;</div>
+          <h3>Eateries &amp; brunch spots</h3>
+          <p>Group-friendly restaurants with big tables, shareable menus, and a lively atmosphere — the backbone of any bachelorette day.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#9973;</div>
+          <h3>Boat charters</h3>
+          <p>Pontoon rentals, sunset cruises, or a full-day charter. Bring a cooler, a speaker, and sunscreen for the best photos of the whole trip.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#127866;</div>
+          <h3>Bar crawls</h3>
+          <p>A planned route through 3-5 bars keeps the group moving and gives structure to the night without over-scheduling it.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#128139;</div>
+          <h3>Spa &amp; pampering</h3>
+          <p>Blowouts, mani-pedis, or a couple hours poolside. A great way to slow the pace down mid-weekend before the next round of festivities.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#127908;</div>
+          <h3>Karaoke &amp; game bars</h3>
+          <p>Private karaoke rooms, arcade bars, and trivia nights are a low-key way to get the group laughing without an early bar tab.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#128248;</div>
+          <h3>Photo ops</h3>
+          <p>A rented balloon arch, a neon sign backdrop, or a scenic overlook — one dedicated photo moment gives everyone the group shot they'll actually post.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="nb-card">
+          <div class="nb-icon">&#127183;</div>
+          <h3>Games &amp; dares</h3>
+          <p>A bingo card of dares for the bride, a scavenger hunt, or a "Mr. and Mrs." trivia round keeps the group engaged between stops.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="nb-tips" id="tips">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="nb-eyebrow">before you book anything</span>
+      <h2 class="nb-section-title mb-3">Planning tips for a smooth weekend</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="nb-tip">
+          <div class="nb-tip-num mb-2">01</div>
+          <h4>Set the budget early</h4>
+          <p>Send a group budget range before booking anything so nobody's surprised by a bar tab or charter cost.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="nb-tip">
+          <div class="nb-tip-num mb-2">02</div>
+          <h4>Book reservations ahead</h4>
+          <p>Group tables, boat charters, and rage rooms fill up fast on weekends — lock these in a few weeks out.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="nb-tip">
+          <div class="nb-tip-num mb-2">03</div>
+          <h4>Build in downtime</h4>
+          <p>Back-to-back activities burn people out. Leave an hour of breathing room between big stops.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="nb-tip">
+          <div class="nb-tip-num mb-2">04</div>
+          <h4>Plan the ride home</h4>
+          <p>Line up a rideshare, shuttle, or designated driver before the night starts, not after last call.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="nb-cta" id="cta">
+  <div class="container">
+    <h2 class="mb-3">Ready to build the weekend?</h2>
+    <p class="mb-4" style="opacity:.9; max-width:520px; margin-left:auto; margin-right:auto;">Mix and match the itinerary above, pick a homebase city, and start locking in reservations.</p>
+    <a href="#itinerary" class="btn-nb-primary" style="box-shadow:0 6px 0 rgba(0,0,0,.2);">Revisit The Itinerary</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="nb-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5>naughty<span style="color:var(--nb-pink);">bachelorette</span></h5>
+        <p>A planning guide for fun, wild, and unforgettable bachelorette parties — built from a Charleston, SC homebase and made to travel anywhere.</p>
+      </div>
+      <div class="col-lg-4">
+        <h5>Explore</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#itinerary">The Itinerary</a></li>
+          <li class="mb-2"><a href="#activities">Activities</a></li>
+          <li class="mb-2"><a href="#tips">Planning Tips</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>More Nightlife Guides</h5>
+        <p>Planning a trip to the Holy City? Get the full local nightlife rundown.</p>
+        <a href="https://partycharleston.com" class="nb-partner-link" target="_blank" rel="noopener">Visit PartyCharleston.com &rarr;</a>
+      </div>
+    </div>
+    <div class="nb-footer-bottom text-center">
+      &copy; 2026 Naughty Bachelorette. For entertainment and planning purposes only. Please drink responsibly.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
